@@ -1,0 +1,101 @@
+/* Gaya umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Gaya untuk setiap bagian (section) */
+section {
+    padding: 40px;
+}
+
+#home {
+    display: flex;
+    justify-content: center; /* Mengatur konten horisontal menjadi tengah */
+    align-items: center; /* Mengatur konten vertikal menjadi tengah */
+    text-align: center; /* Mengatur teks menjadi tengah */
+
+    background-image: url("../images/kol.jpeg");
+    background-size: cover; /* Untuk mengisi seluruh area elemen main */
+    background-position: center; /* Untuk mengatur posisi gambar latar belakang */
+    color: white;
+}
+
+.home-content {
+    flex: 1; /* Mengambil ruang yang tersisa di samping gambar */
+    padding: 20px;
+    max-width: 50%; /* Menentukan lebar maksimum konten teks */
+}
+
+img {
+    max-width: 50%; /* Menentukan lebar maksimum gambar */
+}
+
+#about {
+    background-color: #3498db; /* Warna latar belakang */
+    color: #fff; /* Warna teks */
+    padding: 20px; /* Jarak antara teks dan batas elemen */
+    text-align: center; /* Pusatkan teks secara horizontal */
+}
+
+.slide-image {
+    max-width: 100%;
+    max-height: 100%; /* Gambar sesuai dengan tinggi slider */
+}
+
+/* Tampilan mobile (maksimum 768px) */
+@media (max-width: 768px) {
+    .portfolio-image-caption {
+        display: flex;
+        flex-direction: column; /* Gambar di atas teks */
+    }
+
+    .portfolio-image {
+        width: 100%; /* Mengisi lebar layar */
+        max-height: 200px; /* Menjaga aspek gambar */
+    }
+
+    .portfolio-image-tracking {
+        width: 100%; /* Mengisi lebar layar */
+        max-height: auto; /* Menjaga aspek gambar */
+    }
+}
+
+/* Tampilan lebih besar dari 768px */
+@media (min-width: 769px) {
+    .portfolio-image-caption {
+        display: flex;
+        flex-direction: row; /* Gambar dan teks sejajar */
+    }
+
+    .portfolio-image {
+        width: 50%; /* Setengah lebar */
+        padding-right: 5%;
+    }
+
+    .portfolio-image-tracking {
+        width: 50%; /* Setengah lebar */
+        padding-right: 5%;
+    }
+}
